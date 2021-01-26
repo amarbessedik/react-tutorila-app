@@ -1,0 +1,6 @@
+.footer{
+    background: #20232A;
+    min-height: 30vh;
+    color: #fff;
+    padding: 30px calc((100vw - 1350px) / 2);
+}

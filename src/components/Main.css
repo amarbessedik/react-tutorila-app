@@ -1,0 +1,10 @@
+.main__container{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 79.2px); 
+    width: 70vw;
+}
+.main{
+   min-height: calc(100vh - 15px); 
+   padding: 93px 25px 25px 93px;
+}

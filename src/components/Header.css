@@ -1,0 +1,40 @@
+.header {
+  background: #20232a;
+  padding: 30px calc((100vw - 1350px) / 2);
+  color: #fff;
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+.header{
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  color: #61dafb;
+  border-bottom: 5px solid  #61dafb;
+  width: fit-content;
+}
+.logo span{
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.logo-icon{
+  font-size: 2rem;
+}
+
+.link__list{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.search__input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
