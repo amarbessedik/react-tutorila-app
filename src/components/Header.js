@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './Header.css';
 import {DiReact} from 'react-icons/di';
 import { BsSearch } from "react-icons/bs";
@@ -6,9 +7,9 @@ import { BsSearch } from "react-icons/bs";
 const Header = () => {
     return (
       <div className="header">
-        <div className="logo">
+        <Link to ='/' className="logo">
           <DiReact className='logo-icon'/> React <span>Tutorials</span>
-        </div>
+        </Link>
         <div className="middle__links">
             <ul className='link__list'>
                 <li>link</li>
