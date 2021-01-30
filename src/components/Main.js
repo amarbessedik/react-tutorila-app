@@ -1,12 +1,17 @@
 import React from 'react';
-import Footer from './Footer'
+// import { Switch, Route } from 'react-router-dom';
 import './Main.css';
+import "./courses/Course.css";
+// import Course from './courses/Course';
+// import Section from './toturial-parts/Section';
 
-const Main = () => {
+const Main = (props) => {
+
     return (
-      <div className='main__container'>
-        <div className="main">main</div>
-        <Footer />
+      <div className="main__container">
+        <div className="main">
+         {props.children}
+        </div>
       </div>
     );
 }

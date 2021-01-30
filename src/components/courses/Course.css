@@ -1,0 +1,38 @@
+.course__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 5px solid red;
+}
+.course__section {
+  border: 5px solid #ccc;
+  border-radius: 5px;
+  padding: 0 25px;
+  flex: 1;
+  margin: 25px 5px;
+}
+
+.course__container h1 {
+  margin-top: 20px;
+}
+
+.course__controls {
+  display: flex;
+  justify-content: space-between;
+}
+.control__section {
+  border: 3px solid #61dafb;
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+.course__section p {
+  margin-top: 20px;
+}
+.btn__icon {
+  font-size: 2rem !important;
+  color: #61dafb !important;
+}

@@ -7,4 +7,6 @@
 .main{
    min-height: calc(100vh - 15px);  
    padding: 93px 25px 25px 93px;
+   border: 5px solid blue;
+   margin-left: 25px
 }
