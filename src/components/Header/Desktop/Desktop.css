@@ -1,0 +1,35 @@
+.desktop{
+  display: flex;
+  justify-content: center;
+}
+.desktop__links ul{
+    list-style: none;
+    display: flex;
+    margin-right: 5rem;
+}
+.desktop-nav-link{
+    color: #ddd!important;
+}
+.search__field{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+#search-icon{
+    color: #111!important;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#search-input{
+    outline: none;
+    border: none;
+    min-width: 200px;
+}
+
+@media screen and (max-width: 769px){
+    .desktop{
+        display: none;
+    }
+}

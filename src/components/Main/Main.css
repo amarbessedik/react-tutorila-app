@@ -1,0 +1,14 @@
+.main__wrapper{
+    min-height: calc(100vh + 100px); 
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.main__wrapper:first-child{
+    flex: 1;
+}
+.main__content{
+    padding-left: 80px;
+}

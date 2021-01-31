@@ -1,0 +1,25 @@
+.header{
+    background: #20232A;
+    height: 80px;
+    padding: 10px clamp(2rem, calc(100vw - 1300px) / 2, 5rem);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+}
+#navigation{
+    flex: 1;
+}
+.logo h2{
+  font-weight: 400;
+  color: #61DAFB;
+}
+.logo h2 span{
+    background: #61DAFB;
+    color: #20232A;
+    font-weight: 700;
+    padding: 10px 5px;
+    border-radius: 50%;
+}
