@@ -6,7 +6,7 @@ import './Desktop.css';
 const Desktop = () => {
     return (
         <div className='desktop'>
-            <div className="desktop__links">
+            <div className="desktop__links"> 
                 <ul>
                     <li><Link className='desktop-nav-link' to='/'>Link</Link></li>
                     <li><Link className='desktop-nav-link' to='/'>Link</Link></li>

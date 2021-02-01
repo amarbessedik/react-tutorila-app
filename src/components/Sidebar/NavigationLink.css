@@ -1,0 +1,11 @@
+.sub__navlinks{
+    list-style: none;
+}
+.sub__navlink{
+    color: rgb(133, 131, 131);
+    cursor: pointer;
+    font-weight: 500;
+}
+.sub__navlink:hover{
+  color: #333;
+}
