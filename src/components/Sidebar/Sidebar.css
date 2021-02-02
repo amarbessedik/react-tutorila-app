@@ -9,3 +9,12 @@
     padding: 100px 50px;
     border-left: 1px solid#ccc;
 }
+.sidebar__navlink{
+    display: block;
+    margin-bottom: 15px;
+    color: #777;
+    font-weight: 500;
+}
+.sidebar__navlink:hover{
+   color: #000;
+}

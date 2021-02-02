@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import './NavigationLink.css';
 
 const NavigationLink = ({ topic, to, urls }) => {
@@ -11,8 +12,8 @@ const NavigationLink = ({ topic, to, urls }) => {
 
   return (
     <div className="topic__wrapper">
-      <Link onClick={toggle} className="sidebar__navlink" to={to}>
-        {topic}
+      <Link onClick={toggle} className="topic__navlink" to={to}>
+        {topic} {open? <MdKeyboardArrowUp className='arrow-icon'/>:<MdKeyboardArrowDown className='arrow-icon'/>}
       </Link>
       {open && (
         <ul className="sub__navlinks">

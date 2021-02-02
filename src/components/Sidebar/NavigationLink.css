@@ -1,5 +1,9 @@
 .sub__navlinks{
     list-style: none;
+    background: #efefef;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
 }
 .sub__navlink{
     color: rgb(133, 131, 131);
@@ -8,4 +12,16 @@
 }
 .sub__navlink:hover{
   color: #333;
+}
+.arrow-icon{
+    font-size: 1.2rem!important;
+}
+.topic__navlink{
+    display: flex;
+    margin-bottom: 10px;
+    color: #777;
+    font-weight: 500;
+}
+.topic__navlink:hover{
+   color: #000;
 }

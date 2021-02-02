@@ -6,11 +6,29 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Topic from "./components/Topic/Topic";
 import "./index.css";
 
-const sections = [
-  {subtitle: "SECTION1"},
-  {subtitle: "SECTION2"},
-  {subtitle: "SECTION3"},
-  {subtitle: "SECTION4"},
+const sections1 = [
+  {subtitle: "SECTION1", url: 'section1'},
+  {subtitle: "SECTION2", url: 'section2'},
+  {subtitle: "SECTION3", url: 'section3'},
+  {subtitle: "SECTION4", url: 'section4'},
+];
+const sections2 = [
+  {subtitle: "SECTION1", url: 'section1'},
+  {subtitle: "SECTION2", url: 'section2'},
+  {subtitle: "SECTION3", url: 'section3'},
+  {subtitle: "SECTION4", url: 'section4'},
+];
+const sections3 = [
+  {subtitle: "SECTION1", url: 'section1'},
+  {subtitle: "SECTION2", url: 'section2'},
+  {subtitle: "SECTION3", url: 'section3'},
+  {subtitle: "SECTION4", url: 'section4'},
+];
+const sections4 = [
+  {subtitle: "SECTION1", url: 'section1'},
+  {subtitle: "SECTION2", url: 'section2'},
+  {subtitle: "SECTION3", url: 'section3'},
+  {subtitle: "SECTION4", url: 'section4'},
 ];
 
 const App = () => {
@@ -22,19 +40,19 @@ const App = () => {
           <Switch>
             <Route
               path="/topic1"
-              children={<Topic title="TOPIC-1" sections={sections} />}
+              children={<Topic title="TOPIC-1" sections={sections1} />}
             />
             <Route
               path="/topic2"
-              children={<Topic title="TOPIC-2" sections={sections} />}
+              children={<Topic title="TOPIC-2" sections={sections2} />}
             />
             <Route
               path="/topic3"
-              children={<Topic title="TOPIC-3" sections={sections} />}
+              children={<Topic title="TOPIC-3" sections={sections3} />}
             />
             <Route
               path="/topic4"
-              children={<Topic title="TOPIC-4" sections={sections} />}
+              children={<Topic title="TOPIC-4" sections={sections4} />}
             />
           </Switch>
         </Main>
