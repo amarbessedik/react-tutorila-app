@@ -17,9 +17,9 @@ const NavigationLink = ({ topic, to, urls }) => {
       </Link>
       {open && (
         <ul className="sub__navlinks">
-          {urls.map((entry) => (
+          {urls.map((entry, index) => (
             <li className="sub__navlink">
-              <Link key={entry.id} to={entry.url}>
+              <Link key={index} to={entry.url}>
                 {entry.title}
               </Link>
             </li>

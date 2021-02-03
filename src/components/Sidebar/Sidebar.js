@@ -22,46 +22,64 @@ const urls1 = [
         title: 'Section-3',
         url: '/topic1/section3'
     },
+    {   
+        id:'4',
+        topic: 'Topic-1',
+        title: 'Section-4',
+        url: '/topic1/section4'
+    },
 ];
 const urls2 = [
-    {   
-        id:'1',
-        topic: 'Topic-2',
-        title: 'Section-1',
-        url: '/topic2/section1'
-    },
-    {   
-        id:'2',
-        topic: 'Topic-2',
-        title: 'Section-2',
-        url: '/topic2/section2'
-    },
-    {   
-        id:'3',
-        topic: 'Topic-2',
-        title: 'Section-3',
-        url: '/topic2/section3'
-    },
+  {
+    id: "1",
+    topic: "Topic-2",
+    title: "Section-1",
+    url: "/topic2/section1",
+  },
+  {
+    id: "2",
+    topic: "Topic-2",
+    title: "Section-2",
+    url: "/topic2/section2",
+  },
+  {
+    id: "3",
+    topic: "Topic-2",
+    title: "Section-3",
+    url: "/topic2/section3",
+  },
+  {
+    id: "4",
+    topic: "Topic-2",
+    title: "Section-4",
+    url: "/topic2/section4",
+  },
 ];
 const urls3 = [
-    {   
-        id:'1',
-        topic: 'Topic-3',
-        title: 'Section-1',
-        url: '/topic3/section1'
-    },
-    {   
-        id:'2',
-        topic: 'Topic-3',
-        title: 'Section-2',
-        url: '/topic3/section2'
-    },
-    {   
-        id:'3',
-        topic: 'Topic-3',
-        title: 'Section-3',
-        url: '/topic3/section3'
-    },
+  {
+    id: "1",
+    topic: "Topic-3",
+    title: "Section-1",
+    url: "/topic3/section1",
+  },
+  {
+    id: "2",
+    topic: "Topic-3",
+    title: "Section-2",
+    url: "/topic3/section2",
+  },
+  {
+    id: "3",
+    topic: "Topic-3",
+    title: "Section-3",
+    url: "/topic3/section3",
+  },
+  {
+    id: "4",
+    topic: "Topic-3",
+    title: "Section-4",
+    url: "/topic3/section4",
+  },
 ];
 
 const Sidebar = () => {

@@ -7,31 +7,32 @@ import Topic from "./components/Topic/Topic";
 import "./index.css";
 
 const sections1 = [
-  {subtitle: "SECTION1", url: 'section1'},
-  {subtitle: "SECTION2", url: 'section2'},
-  {subtitle: "SECTION3", url: 'section3'},
-  {subtitle: "SECTION4", url: 'section4'},
+  {subtitle: "SECTION1", url: 'section1', rank: 0},
+  {subtitle: "SECTION2", url: 'section2', rank: 1},
+  {subtitle: "SECTION3", url: 'section3', rank: 2},
+  {subtitle: "SECTION4", url: 'section4', rank: 3},
 ];
 const sections2 = [
-  {subtitle: "SECTION1", url: 'section1'},
-  {subtitle: "SECTION2", url: 'section2'},
-  {subtitle: "SECTION3", url: 'section3'},
-  {subtitle: "SECTION4", url: 'section4'},
+  {subtitle: "SECTION1", url: 'section1', rank: 0},
+  {subtitle: "SECTION2", url: 'section2', rank: 1},
+  {subtitle: "SECTION3", url: 'section3', rank: 2},
+  {subtitle: "SECTION4", url: 'section4', rank: 3},
 ];
 const sections3 = [
-  {subtitle: "SECTION1", url: 'section1'},
-  {subtitle: "SECTION2", url: 'section2'},
-  {subtitle: "SECTION3", url: 'section3'},
-  {subtitle: "SECTION4", url: 'section4'},
+  {subtitle: "SECTION1", url: 'section1', rank: 0},
+  {subtitle: "SECTION2", url: 'section2', rank: 1},
+  {subtitle: "SECTION3", url: 'section3', rank: 2},
+  {subtitle: "SECTION4", url: 'section4', rank: 3},
 ];
 const sections4 = [
-  {subtitle: "SECTION1", url: 'section1'},
-  {subtitle: "SECTION2", url: 'section2'},
-  {subtitle: "SECTION3", url: 'section3'},
-  {subtitle: "SECTION4", url: 'section4'},
+  {subtitle: "SECTION1", url: 'section1', rank: 0},
+  {subtitle: "SECTION2", url: 'section2', rank: 1},
+  {subtitle: "SECTION3", url: 'section3', rank: 2},
+  {subtitle: "SECTION4", url: 'section4', rank: 3},
 ];
 
 const App = () => {
+  
   return (
     <React.Fragment>
       <Header />

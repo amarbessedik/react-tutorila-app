@@ -4,26 +4,26 @@ import Section from "../Section/Section";
 import "./Topic.css";
 
 const Topic = (props) => {
-  const { path,  } = useRouteMatch();
-  const {sections, title} = props;
+  let { path,  } = useRouteMatch();
+  const { sections, title } = props;
 
-  const [section, setSection] = useState(0); 
+  const [sectionIndex, setSectionIndex] = useState(0);
 
-  const prevSection = () =>{
-    if(section > 0){
-        setSection(section - 1);
-    }else{
-        setSection(0);
+  const prevSection = () => {
+    //  console.log('prev: ', sectionIndex);
+    if (sectionIndex > 0) {
+      setSectionIndex(sectionIndex - 1);
+    } 
+    // console.log('prev: ', sectionIndex);
+  };
+  const nextSection = () => {
+    //   console.log('next: ', sectionIndex);
+    if (sectionIndex < sections.length - 1) {
+      setSectionIndex(sectionIndex + 1);
     }
-  }
-  const nextSection = () =>{
-    if (section < sections.length - 1) {
-      setSection(section + 1);
-    }else{
-        setSection(sections.length - 1);
-    }
-  }
-
+    // console.log('next: ', sectionIndex); 
+  };
+ 
   return (
     <div className="topic__container">
       <h1>{title}</h1>
@@ -31,17 +31,21 @@ const Topic = (props) => {
         {sections.map((section, key) => (
           <Route
             key={key}
-            path={`${path}/${section.subtitle}`}
-            children={<Section subtitle={section.subtitle} />}
+            path={`${path}/${section.url}`}
+            children={
+              <Section
+                subtitle={section.subtitle}
+              />
+            }
           />
         ))}
       </Switch>
       <div className="ctrl__container">
         <div className="previous__ctrl" onClick={prevSection}>
-          <Link to={`${path}/${sections[section].url}`}>PREVIOUS</Link>
+          <Link to={`${path}/${sections[sectionIndex].url}`}>PREVIOUS</Link>
         </div>
         <div className="next__ctrl" onClick={nextSection}>
-          <Link to={`${path}/${sections[section].url}`}>NEXT</Link>
+          <Link to={`${path}/${sections[sectionIndex].url}`}>NEXT</Link>
         </div>
       </div>
     </div>
