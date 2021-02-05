@@ -4,48 +4,30 @@ import Section from "../Section/Section";
 import "./Topic.css";
 
 const Topic = (props) => {
-  let { path,  } = useRouteMatch();
+  let { path } = useRouteMatch();
   const { sections, title } = props;
+  const [index, setIndex ] = useState(props.section);
+  
+  console.log('TOPICX: ', props.section);
 
-  const [sectionIndex, setSectionIndex] = useState(0);
-
-  const prevSection = () => {
-    //  console.log('prev: ', sectionIndex);
-    if (sectionIndex > 0) {
-      setSectionIndex(sectionIndex - 1);
-    } 
-    // console.log('prev: ', sectionIndex);
-  };
-  const nextSection = () => {
-    //   console.log('next: ', sectionIndex);
-    if (sectionIndex < sections.length - 1) {
-      setSectionIndex(sectionIndex + 1);
-    }
-    // console.log('next: ', sectionIndex); 
-  };
- 
   return (
     <div className="topic__container">
       <h1>{title}</h1>
       <Switch>
-        {sections.map((section, key) => (
+        {sections.map((entry, key) => (
           <Route
             key={key}
-            path={`${path}/${section.url}`}
-            children={
-              <Section
-                subtitle={section.subtitle}
-              />
-            }
+            path={`${path}/${entry.url}`}
+            children={<Section subtitle={entry.subtitle} />}
           />
         ))}
       </Switch>
       <div className="ctrl__container">
-        <div className="previous__ctrl" onClick={prevSection}>
-          <Link to={`${path}/${sections[sectionIndex].url}`}>PREVIOUS</Link>
+        <div className="previous__ctrl" onClick={()=>{setIndex(props.backward());}}>
+          <Link to={path + `/section${index}`}>PREVIOUS</Link>
         </div>
-        <div className="next__ctrl" onClick={nextSection}>
-          <Link to={`${path}/${sections[sectionIndex].url}`}>NEXT</Link>
+        <div className="next__ctrl" onClick={()=>{setIndex(props.forward(sections));}}>
+          <Link to={path + `/section${index}`}>NEXT</Link>
         </div>
       </div>
     </div>

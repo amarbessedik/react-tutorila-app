@@ -82,7 +82,7 @@ const urls3 = [
   },
 ];
 
-const Sidebar = () => {
+const Sidebar = (props) => { 
 
   return (
     <div className="sidebar">
@@ -95,9 +95,9 @@ const Sidebar = () => {
             Home
           </Link>
         </div>
-        <NavigationLink topic='Topic-1' to='/topic1' urls={urls1} />
-        <NavigationLink topic='Topic-2' to='/topic2' urls={urls2} />
-        <NavigationLink topic='Topic-3' to='/topic3' urls={urls3} />
+        <NavigationLink topic='Topic-1' to='/topic1' urls={urls1} updateSection={props.updateSection}/>
+        <NavigationLink topic='Topic-2' to='/topic2' urls={urls2} updateSection={props.updateSection}/>
+        <NavigationLink topic='Topic-3' to='/topic3' urls={urls3} updateSection={props.updateSection}/>
       </div>
     </div>
   );
