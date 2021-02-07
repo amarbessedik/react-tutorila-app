@@ -1,4 +1,12 @@
 .section__container{
-    background-color: #eee;
+    background-color: rgb(228, 224, 15);
     color: #940aaf;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 5px solid #940aaf;
+    border-radius: 5px;
 }

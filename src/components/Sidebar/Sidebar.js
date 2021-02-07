@@ -1,103 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavigationLink from "./NavigationLink";
+import {URLS} from '../../../src/data/urls';
+import { IoHome } from 'react-icons/io5';
 import "./Sidebar.css";
-
-const urls1 = [
-    {   
-        id:'1',
-        topic: 'Topic-1',
-        title: 'Section-1',
-        url: '/topic1/section1'
-    },
-    {   
-        id:'2',
-        topic: 'Topic-1',
-        title: 'Section-2',
-        url: '/topic1/section2'
-    },
-    {   
-        id:'3',
-        topic: 'Topic-1',
-        title: 'Section-3',
-        url: '/topic1/section3'
-    },
-    {   
-        id:'4',
-        topic: 'Topic-1',
-        title: 'Section-4',
-        url: '/topic1/section4'
-    },
-];
-const urls2 = [
-  {
-    id: "1",
-    topic: "Topic-2",
-    title: "Section-1",
-    url: "/topic2/section1",
-  },
-  {
-    id: "2",
-    topic: "Topic-2",
-    title: "Section-2",
-    url: "/topic2/section2",
-  },
-  {
-    id: "3",
-    topic: "Topic-2",
-    title: "Section-3",
-    url: "/topic2/section3",
-  },
-  {
-    id: "4",
-    topic: "Topic-2",
-    title: "Section-4",
-    url: "/topic2/section4",
-  },
-];
-const urls3 = [
-  {
-    id: "1",
-    topic: "Topic-3",
-    title: "Section-1",
-    url: "/topic3/section1",
-  },
-  {
-    id: "2",
-    topic: "Topic-3",
-    title: "Section-2",
-    url: "/topic3/section2",
-  },
-  {
-    id: "3",
-    topic: "Topic-3",
-    title: "Section-3",
-    url: "/topic3/section3",
-  },
-  {
-    id: "4",
-    topic: "Topic-3",
-    title: "Section-4",
-    url: "/topic3/section4",
-  },
-];
 
 const Sidebar = (props) => { 
 
   return (
     <div className="sidebar">
-      <h2>SIDEBAR NAVIGATION</h2>
+      <h2>TOPIC NAVIGATION</h2>
       <hr />
       <br />
       <div className="sidebar__navlinks">
         <div>
           <Link className="sidebar__navlink" to="/">
-            Home
+            Home <IoHome />
           </Link>
         </div>
-        <NavigationLink topic='Topic-1' to='/topic1' urls={urls1} updateSection={props.updateSection}/>
-        <NavigationLink topic='Topic-2' to='/topic2' urls={urls2} updateSection={props.updateSection}/>
-        <NavigationLink topic='Topic-3' to='/topic3' urls={urls3} updateSection={props.updateSection}/>
+        {
+          URLS.map((urls)=>(
+            <NavigationLink to={`/topic${urls.id}`} urls={urls} updateSectionDB={props.updateSectionDB}/>
+          ))
+        }
       </div>
     </div>
   );

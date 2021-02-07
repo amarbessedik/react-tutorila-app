@@ -4,10 +4,10 @@ import './Section.css';
 const Section = (props) => {
     return (
         <div className='section__container'>
-             <h3>{props.subtitle}</h3>
+             <h1>{props.title}</h1>
              {props.children}
         </div>
     );
-}
+} 
 
 export default Section;

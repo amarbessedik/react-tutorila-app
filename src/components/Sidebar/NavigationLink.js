@@ -1,36 +1,42 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
-import './NavigationLink.css';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import "./NavigationLink.css";
 
-const NavigationLink = ({ topic, to, urls, updateSection }) => {
+const NavigationLink = (props) => {
   const [open, setOpen] = useState(false);
 
   const toggle = () => {
     setOpen(!open);
+    props.updateSectionDB(-1);
   };
 
   return (
     <div className="topic__wrapper">
-      <Link onClick={toggle} className="topic__navlink" to={to}>
-        {topic}{" "}
-        {open ? (
-          <MdKeyboardArrowUp className="arrow-icon" />
-        ) : (
-          <MdKeyboardArrowDown className="arrow-icon" />
-        )}
-      </Link>
+      <div onClick={toggle} className="topic__wrapper">
+        <span>
+          <Link className="topic__title" to={props.to}>
+            {props.urls.topic}
+            {open ? (
+              <MdKeyboardArrowUp className="arrow-icon" />
+            ) : (
+              <MdKeyboardArrowDown className="arrow-icon" />
+            )}
+          </Link>
+        </span>
+      </div>
       {open && (
         <ul className="sub__navlinks">
-          {urls.map((entry, index) => (
+          {props.urls.links.map((entry, index) => (
             <li
-              key={index}
-              className="sub__navlink"
+              key={entry.id}
               onClick={() => {
-                updateSection(entry.id);
+                props.updateSectionDB(index);
               }}
             >
-              <Link to={entry.url}>{entry.title}</Link>
+              <Link className="sub__navlink" to={entry.url}>
+                {entry.title}
+              </Link>
             </li>
           ))}
         </ul>

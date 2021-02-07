@@ -7,9 +7,22 @@
     justify-content: space-between;
 }
 .topic__container h1{
-    color: #61DAFB;
+    color: #293d04;
 }
 .ctrl__container{
     display: flex;
     justify-content: space-between;
+}
+.prev__ctrl a, .next__ctrl a{
+  border: 2px solid #333;
+  padding: 8px;
+  border-radius: 5px;
+  /* cursor: pointer; */
+  background: rgb(221, 233, 245);
+  display: inline-block;
+  width: 110px;
+  text-align: center;
+}
+.prev__ctrl a:hover, .next__ctrl a:hover{
+  background: rgba(221, 233, 245, 0.5);
 }
